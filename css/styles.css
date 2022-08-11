@@ -53,13 +53,13 @@ address {
 }
 
 body {
-	color: var(--primary-text-color);
-	/* background-color: var(--primary-bg-color); */
-	background-color: var(--primary-bg-color);
 	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
+
+	color: var(--primary-text-color);
+	background-color: var(--primary-bg-color);
 }
 
 .section {
@@ -86,15 +86,23 @@ body {
 	width: 1px;
 	height: 1px;
 	margin: -1px;
-	border: 0;
 	padding: 0;
+
 	white-space: nowrap;
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+	border: 0;
 }
 
-/* Header */
+/**
+  |============================
+  | 			Header 
+  |============================
+*/
+
+
+
 .header {
 	background-color: var(--wite-color);
 	border: 1px solid var(--border-color);
@@ -114,12 +122,13 @@ body {
 .logo {
 	display: inline-block;
 
-	color: var(--black-color);
 	font-family: "Raleway", cursive;
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 1.19;
 	text-decoration: inherit;
+
+	color: var(--black-color);
 }
 
 .logo-accent {
@@ -147,11 +156,12 @@ body {
 	padding-top: 32px;
 	padding-bottom: 32px;
 
-	color: var(--title-text-color);
 	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	text-decoration: inherit;
+
+	color: var(--title-text-color);
 }
 
 .site-nav .link:hover,
@@ -166,6 +176,22 @@ body {
 .link-home {
 	color: var(--accent-text-color);
 }
+
+.site-nav .item {
+	position: relative;
+}
+
+.link-home::before{
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+ 	content: "";
+	width: 100%;
+	height: 4px;
+	background-color: var(--accent-text-color);
+
+}
+
 
 /* Links to email and phone */
 .position {
@@ -188,9 +214,11 @@ body {
 	justify-content: center;
 	align-items: center;
 
+	text-decoration: inherit;
+
 	fill: var(--primary-text-color);
 	color: var(--primary-text-color);
-	text-decoration: inherit;
+
 }
 
 .email-phone .email-style:hover,
@@ -217,19 +245,22 @@ body {
 		HERO 
 ======================*/
 .hero {
+	width: 1600px;
 	padding-top: 200px;
 	padding-bottom: 200px;
-	width: 1600px;
-	margin-left: auto;
+		margin-left: auto;
 	margin-right: auto;
 
-	background-color: var(--accent-bg-color);
 	text-align: center;
+
+	background-color: var(--accent-bg-color);
+
 }
 
 .overlay {
 	width: 1600px;
 	height: 600px;
+
 	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 		url("../images/img-017-hiro.jpg");
 	background-repeat: no-repeat;
@@ -238,37 +269,34 @@ body {
 }
 
 .hero-title {
-
-	margin-bottom: 30px;
-	margin-left: auto;
-	margin-right: auto;
 	width: 694px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 30px;
 
-	color: var(--wite-color);
 	font-weight: 900;
-
 	font-size: 44px;
 	line-height: 1.36;
-
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 
-
-	margin-top: 0;
-
+	color: var(--wite-color);
 
 }
 
 .button {
 	padding: 10px 32px;
-	border-radius: 4px;
-	color: var(--wite-color);
-	background-color: var(--accent-text-color);
-	border: 1px solid var(--accent-text-color);
+
 	font-family: inherit;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.88;
+
+	color: var(--wite-color);
+	background-color: var(--accent-text-color);
+	border: 1px solid var(--accent-text-color);
+	border-radius: 4px;
 	cursor: pointer;
 }
 
@@ -280,10 +308,12 @@ body {
 	margin-top: 0;
 	margin-bottom: 50px;
 
-	color: var(--title-text-color);
 	font-size: 36px;
 	line-height: 1.17;
 	text-align: center;
+
+	color: var(--title-text-color);
+
 }
 /*==============================================
 		secondary titles заголовки другорядні 
@@ -301,10 +331,12 @@ body {
 .feature-list .title {
 	margin-top: 0;
 	margin-bottom: 10px;
-	color: var(--title-text-color);
+
 	font-size: 14px;
 	line-height: 1.14;
 	text-transform: uppercase;
+
+	color: var(--title-text-color);
 }
 
 .feature-list p {
@@ -329,6 +361,41 @@ body {
 	height: 70px;
 }
 
+.work-blok {
+	position: relative;
+
+}
+
+.work-box {
+	position: absolute;
+	bottom: 0;
+	
+	width: 370px;
+	height: 70px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+	background: rgba(47, 48, 58, 0.8);
+
+}
+
+.work-list .title {
+
+	margin-top: 0;
+	margin-bottom: 0;
+
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+	text-align: center;
+
+	color: var(--wite-color);
+}
+
+
 /*===============================
 		Our team - Наша команда
 =================================*/
@@ -341,11 +408,13 @@ body {
 	margin-top: 0;
 	margin-bottom: 10px;
 
-	color: var(--title-text-color);
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.9;
 	text-align: center;
+
+	color: var(--title-text-color);
+
 }
 
 .team-list .profession {
@@ -358,9 +427,9 @@ body {
 }
 
 .team-list .member-team {
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 0px 0px 4px 4px;
 	background-color: var(--primary-bg-color);
+	border-radius: 0px 0px 4px 4px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .personal-data {
@@ -369,7 +438,7 @@ body {
 }
 
 .individual-links {
-		padding-left: 32px;
+	padding-left: 32px;
 	padding-right: 32px;
 	display: flex;
 	justify-content: space-between;
@@ -378,7 +447,7 @@ body {
 .social-link {
 	width: 44px;
 	height: 44px;
-	border-radius: 50%;
+
 	text-decoration: none;
 	border: none;
 	cursor: pointer;
@@ -387,6 +456,7 @@ body {
 	align-items: center;
 
 	color: var(--icon-svg);
+	border-radius: 50%;
 }
 
 .social-link:hover,
@@ -399,6 +469,7 @@ body {
 .icon-link {
 	width: 20px;
 	height: 20px;
+
 	fill: currentColor;
 }
 
@@ -415,20 +486,22 @@ body {
 .customer-link {
 	width: 170px;
 	height: 92px;
-	border: 1px solid var(--icon-svg);
-	border-radius: 4px;
-	cursor: pointer;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 	fill: var(--icon-svg);
+	border: 1px solid var(--icon-svg);
+	border-radius: 4px;
+	cursor: pointer;
 }
 
 .customer-link:hover,
 .customer-link:focus {
-	outline: transparent;
-	border: 2px solid var(--accent-text-color);
 	fill: var(--accent-text-color);
+	border: 2px solid var(--accent-text-color);
+	outline: transparent;
 }
 
 .customer-icon {
@@ -453,17 +526,21 @@ body {
 }
 
 .address {
-	color: var(--wite-color);
-	font-style: normal;
 	margin-bottom: 9px;
+
+	font-style: normal;
+
+	color: var(--wite-color);
 }
 
 .footer .email-style,
 .footer .phone-style {
-	color: var(--contact-link-color);
+	justify-content: flex-start;
+		
 	font-weight: 400;
 	line-height: 1.71;
-	justify-content: flex-start;
+
+	color: var(--contact-link-color);
 }
 
 .footer .email-style {
@@ -485,15 +562,16 @@ body {
 }
 
 .company-links {
-
 	display: flex;
 	justify-content: space-between;
 }
 
 .company-link {
+	margin-right: 10px;
+
 	color: var(--wite-color);
 	background-color: var(--icon-bg);
-	margin-right: 10px;
+
 }
 
 /*===============================
@@ -513,15 +591,17 @@ body {
 .filter {
 	display: block;
 	padding: 6px 22px;
-	border-radius: 4px;
 
 	font-family: inherit;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.62;
-	border: 0;
+	
 	color: var(--title-text-color);
 	background-color: var(--secondery-bg-color);
+	border: 0;
+	border-radius: 4px;
+
 }
 
 .filter:hover,
@@ -560,6 +640,7 @@ body {
 
 .note {
 	padding: 20px 24px;
+
 	border-left: 1px solid var(--border-color);
 	border-right: 1px solid var(--border-color);
 	border-bottom: 1px solid var(--border-color);
@@ -569,10 +650,12 @@ body {
 	margin-top: 0;
 	margin-bottom: 4px;
 
-	color: var(--title-text-color);
 	font-size: 18px;
 	line-height: 2;
 	letter-spacing: 0.06em;
+
+	color: var(--title-text-color);
+
 }
 
 .example-list p {
