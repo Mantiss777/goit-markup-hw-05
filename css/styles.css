@@ -58,7 +58,7 @@ address {
 	--bg-absolut-work:rgba(47, 48, 58, 0.8);
 	--bg-absolut-exempel:rgba(33, 150, 243, 0.9);
 	/* animation */
-	--timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	--timing-function: 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -665,9 +665,7 @@ body {
 	border: 0;
 	border-radius: 4px;
 
-
-
-	transition: color var(--timing-function), background-color color var(--timing-function), box-shadow  var(--timing-function) ;
+	transition: color var(--timing-function), background-color var(--timing-function), box-shadow  var(--timing-function) ;
 
 }
 
@@ -699,7 +697,6 @@ body {
 	display: block;
 
 	transition: box-shadow var(--timing-function);
-
 }
 
 .example-link:hover,
@@ -824,8 +821,8 @@ body {
 .backdrop.is-hidden {
 	opacity: 0;
 	pointer-events: none;
-	/* visibility: inherit;
-	pointer-events: all; */
+	visibility: hidden;
+	/* pointer-events: all;  */
 
 } 
 
@@ -871,5 +868,43 @@ body {
 	fill: currentColor;
 }
 
+.modal-title{
+
+	padding-top: 40px;
+	font-size: 20px;
+	line-height: 1.15;
+	text-align: center;
+	letter-spacing: 0.03em;
+
+		color: var(--title-text-color);	
+}
 
 
+.form{
+ 
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	outline: 1px solid tomato;
+
+
+		/* display: flex;
+	flex-direction: column; */
+}
+
+.form-field{
+	margin-bottom: 10px;
+
+	display: flex;
+	flex-direction: column;
+	/* align-items: flex-start; */
+	
+}
+
+
+
+
+.form-imput:focus + .form-label{
+	color: red;
+}
